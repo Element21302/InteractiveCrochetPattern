@@ -1,6 +1,9 @@
 console.log("starting script");
 
-$.getJSON("easter_bunny_peep.json", function(json) {
+var patternName = "easter-bunny-peep";
+var patternLocation = "wp-content/uploads/patterns/" + patternName + "/";
+
+$.getJSON(patternLocation + "easter_bunny_peep.json", function(json) {
     console.log(json);
     loadPattern(json)
 });
@@ -37,7 +40,7 @@ function loadFeaturedImages(data_json){
     for (var i = 0; i < images.length; i++){
         var img = document.createElement("img");
         console.log(data_json["featured_images"][i])
-        img.setAttribute("src", data_json["featured_images"][i]);
+        img.setAttribute("src", patternLocation + data_json["featured_images"][i]);
         img.setAttribute("class", "featured-images");
         document.getElementById("pattern-featured-images").appendChild(img);
     }
@@ -129,7 +132,7 @@ function loadSteps(data_json){
                 var imgDiv = document.createElement("div");
                 var img = document.createElement("img");
                 img.setAttribute("class", "step-image");
-                img.setAttribute("src", steps[o]["value"]);
+                img.setAttribute("src", patternLocation + steps[o]["value"]);
                 imgDiv.appendChild(img);
                 stepsDiv.appendChild(imgDiv);
             }
@@ -145,7 +148,7 @@ function loadPatternImages(data_json){
     for (var i = 0; i < images.length; i++){
         var img = document.createElement("img");
         console.log(data_json["pattern_images"][i])
-        img.setAttribute("src", data_json["pattern_images"][i]);
+        img.setAttribute("src", patternLocation + data_json["pattern_images"][i]);
         img.setAttribute("class", "pattern-images");
         document.getElementById("pattern-images").appendChild(img);
     }

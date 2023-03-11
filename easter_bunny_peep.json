@@ -1,0 +1,166 @@
+{
+    "name": "easter-bunny-peep",
+    "title": "Easter Bunny Peep",
+    "subtitle": "By Benny Buds",
+    "featured_images": [
+        "easter-bunny-peep1.jpg",
+        "easter-bunny-peep2.jpg"
+    ],
+    "materials": [
+        "Premier Parfait Chunky - any color",
+        "4.5 mm crochet hook",
+        "3 - 10 mm safety eyes",
+        "Stitch markers",
+        "Scissors",
+        "Stuffing material of your choice"
+    ],
+    "crochet_terms": [
+        "dec - single crochet decrease",
+        "inc - single crochet increase",
+        "MR - Magic Ring",
+        "sc - single crochet"
+    ],
+    "finished_size": "Around 7 inches tall if you use similar weight yarn and a 4.5mm crochet hook",
+    "notes": [
+        "The number inside the parenthesis of each round shows the final count of stitches on that round."
+    ],
+    "pattern": [
+        {
+            "section_name": "ears",
+            "quantity": 2,
+            "steps": [
+                {
+                    "type": "row",
+                    "value": "R1: 6sc MR (6)"
+                },
+                {
+                    "type": "row",
+                    "value": "R2: 2sc, inc, 2sc, inc (8)"
+                },
+                {
+                    "type": "row",
+                    "value": "R3-6: 8sc (8)"
+                },
+                {
+                    "type": "row",
+                    "value": "R7: 8sc, inc (9), slip stitch"
+                },
+                {
+                    "type": "note",
+                    "value": "Fasten off 1st ear only."
+                }
+            ]
+        },
+        {
+            "section_name": "body",
+            "quantity": 1,
+            "steps": [
+                {
+                    "type": "note",
+                    "value": "Continue on 1st ear starting in slip stitch:"
+                },
+                {
+                    "type": "image",
+                    "value": "easter-bunny-peep-step1.jpg"
+                },
+                {
+                    "type": "row",
+                    "value": "R8: 4sc, dec, 3sc (1st ear) 3sc, dec, 4sc (2nd ear) (16)"
+                },
+                {
+                    "type": "note",
+                    "value": "(use tail to sew up hole where ears are joined)"
+                },
+                {
+                    "type": "row",
+                    "value": "R9: (3sc, inc) x4 (20)"
+                },
+                {
+                    "type": "row",
+                    "value": "R10: 4sc, 3sc in next stitch, 9sc, 3sc in next stitch , 5sc (24)"
+                },
+                {
+                    "type": "row",
+                    "value": "R11: (3sc, inc) x6 (30)"
+                },
+                {
+                    "type": "row",
+                    "value": "R12-13: 30sc (30)"
+                },
+                {
+                    "type": "row",
+                    "value": "R14: (3sc, dec) x6 (24)"
+                },
+                {
+                    "type": "note",
+                    "value": "*Stuff both ears at this point and add safety eyes*"
+                },
+                {
+                    "type": "note",
+                    "value": "Eyes are placed between rows 11 and 12, 6 stitches apart."
+                },
+                {
+                    "type": "note",
+                    "value": "Nose is centered in the row below."
+                },
+                {
+                    "type": "row",
+                    "value": "R15: 4sc, dec, 10sc, dec, 6sc (22)"
+                },
+                {
+                    "type": "row",
+                    "value": "R16: 1sc, dec x3, 5sc, dec x3, 4sc (16)"
+                },
+                {
+                    "type": "row",
+                    "value": "R17:*whole round is worked in the front loop only* (3sc, inc) x4 (20)"
+                },
+                {
+                    "type": "row",
+                    "value": "R18:  2sc, inc,  9sc, inc, 7sc (22)"
+                },
+                {
+                    "type": "note",
+                    "value": "*Continue to stuff firmly*"
+                },
+                {
+                    "type": "row",
+                    "value": "R19: 2sc, (3sc in one stitch) x2, 9sc, (3sc in one stitch) x2, 8sc (30)"
+                },
+                {
+                    "type": "row",
+                    "value": "R20-24: 30 sc (30)"
+                },
+                {
+                    "type": "row",
+                    "value": "R25: (3sc, dec) x6 (24)"
+                },
+                {
+                    "type": "row",
+                    "value": "R26: 3sc, dec, 10sc, dec, 7sc (22)"
+                },
+                {
+                    "type": "row",
+                    "value": "R27: dec x3, 5sc, dec x3, 5sc (16)"
+                },
+                {
+                    "type": "note",
+                    "value": "*Finish stuffing*"
+                },
+                {
+                    "type": "row",
+                    "value": "R28: dec x8 (8)"
+                },
+                {
+                    "type": "note",
+                    "value": "Fasten Off. Weave in ends."
+                }
+            ]
+        }
+    ],
+    "pattern_images": [
+        "easter-bunny-peep3.jpg",
+        "easter-bunny-peep4.jpg",
+        "easter-bunny-peep5.jpg"
+    ]
+}

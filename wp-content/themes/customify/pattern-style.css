@@ -17,14 +17,7 @@ li{
 }
 
 
-#container{
-    max-width: 100%;
-    text-align: center;
-}
 #pattern{
-    display: inline-block;
-    margin: 0 auto;
-    padding: 3px;
     text-align: center;
 }
 #pattern-title{
@@ -39,8 +32,9 @@ li{
     font-size: 1.3em;
     font-weight: bold;
     display: inline-block;
-    margin: 0 auto;
+    margin: 20px;
     padding: 10px;
+    border: 3px solid #3ab2b8;
 }
 #pattern-steps{
     text-align: left;
@@ -49,7 +43,6 @@ li{
 
 .images{
     padding: 5px;
-    height: 300px;
 }
 .column{
     display: inline-block;
@@ -68,7 +61,7 @@ li{
     display: inline-block;
     font-size: 1.5em;
     font-weight: bold;
-    padding: 10px 0 10px 20px;
+    padding-left: 40px;
 }
 .section-quantity{
     display: inline-block;

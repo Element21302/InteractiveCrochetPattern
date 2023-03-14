@@ -40,7 +40,7 @@ function loadFeaturedImages(data_json){
         console.log(data_json["featured_images"][i])
         img.setAttribute("src", patternLocation + data_json["featured_images"][i]);
         img.setAttribute("class", "images");
-        img.setAttribute("style", "height: 300px;")
+        img.setAttribute("style", "max-height: 300px; max-width: 400px;")
         document.getElementById("pattern-featured-images").appendChild(img);
     }
 }
@@ -70,7 +70,8 @@ function loadCrochetTerms(data_json){
 }
 
 function loadFinishedSize(data_json){
-    var finishedSize = document.createTextNode(data_json["finished_size"]);
+    var finishedSize = document.createElement("div");
+    finishedSize.innerHTML = data_json["finished_size"];
     document.getElementById("pattern-finished-size").appendChild(finishedSize);
 }
 
@@ -95,7 +96,7 @@ function loadDisclaimer(data_json){
 
 function loadSteps(data_json){
     var sections = data_json["pattern"];
-    var sectionsDiv = document.createElement("div");
+    //var sectionsDiv = document.createElement("div");
 
     for (var i = 0; i < sections.length; i++){
         var sectionDiv = document.createElement("div");
@@ -133,7 +134,6 @@ function loadSteps(data_json){
                 label.innerHTML = steps[o]["value"];
                 checkboxDiv.appendChild(label);
 
-
                 stepsDiv.appendChild(checkboxDiv);
             }
             else if(steps[o]["type"] == "note"){
@@ -146,16 +146,18 @@ function loadSteps(data_json){
                 var imgDiv = document.createElement("div");
                 var img = document.createElement("img");
                 img.setAttribute("class", "images");
-                img.setAttribute("style", "height: 300px;");
+                img.setAttribute("style", "max-height: 300px; max-width: 400px;")
                 img.setAttribute("src", patternLocation + steps[o]["value"]);
                 imgDiv.appendChild(img);
                 stepsDiv.appendChild(imgDiv);
             }
         }
         sectionDiv.appendChild(stepsDiv);
-        sectionsDiv.appendChild(sectionDiv);
+        document.getElementById("pattern-steps").appendChild(sectionDiv);
+        //sectionsDiv.appendChild(sectionDiv);
+
     }
-    document.getElementById("pattern-steps").appendChild(sectionsDiv);
+    //document.getElementById("pattern-steps").appendChild(sectionsDiv);
 }
 
 function loadPatternImages(data_json){
@@ -165,7 +167,7 @@ function loadPatternImages(data_json){
         console.log(data_json["pattern_images"][i])
         img.setAttribute("src", patternLocation + data_json["pattern_images"][i]);
         img.setAttribute("class", "images");
-        img.setAttribute("style", "height: 300px;");
+        img.setAttribute("style", "max-height: 300px; max-width: 400px;")
         document.getElementById("pattern-images").appendChild(img);
     }
 }

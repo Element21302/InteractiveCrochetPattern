@@ -25,7 +25,6 @@ li{
     display: inline-block;
     margin: 0 auto;
     padding: 3px;
-    max-width: 80%;
     text-align: center;
 }
 #pattern-title{
@@ -37,7 +36,6 @@ li{
     font-weight: bold;
 }
 #pattern-disclaimer{
-    width: 85%;
     font-size: 1.3em;
     font-weight: bold;
     display: inline-block;
@@ -49,22 +47,15 @@ li{
 }
 
 
-.featured-images{
+.images{
+    padding: 5px;
     height: 300px;
-    padding: 5px;
 }
-.step-image{
-    height: 150px;
-    padding: 5px;
-}
-.pattern-images{
-    height: 200px;
-    padding: 5px;
-}
-.columns{
+.column{
     display: inline-block;
-    width: 49%;
     vertical-align: top;
+    min-width: 350px;
+    max-width: 500px;
 }
 .column-header{
     font-size: 1.5em;

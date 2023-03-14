@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>title</title>
-    <link rel="stylesheet" href="wp-content/themes/customify/pattern-style.css">
+    <link rel="stylesheet" href="wp-content/themes/customify/pattern-style.css?=0.0.3">
     <script src="wp-content/themes/customify/js/jquery-3.6.4.min.js"></script>
 </head>
 <body>
@@ -14,26 +14,23 @@
             <div id="pattern-subtitle"></div>
             <div id="pattern-featured-images"></div>
             <div id="columns">
-                <div id="left-column" class="columns">
-                    <div>
-                        <div class="column-header">Materials</div>
-                        <div id="pattern-materials-list"></div>
-                    </div>
-                    <div>
-                        <div class="column-header">Crochet Terms</div>
-                        <div id="pattern-crochet-terms-list"></div>
-                    </div>
+
+                <div id="pattern-materials-list" class="column">
+                    <span class="column-header">Materials</span>
                 </div>
-                <div id="right-column" class="columns">
-                    <div>
-                        <div class="column-header">Finished Size</div>
-                        <div id="pattern-finished-size" class="finished-size"></div>
-                    </div>
-                    <div>
-                        <div class="column-header">Notes</div>
-                        <div id="pattern-notes-list"></div>
-                    </div>
+
+                <div id="pattern-crochet-terms-list" class="column">
+                    <div class="column-header">Crochet Terms</div>
                 </div>
+
+                <div id="pattern-notes-list" class="column">
+                    <div class="column-header">Notes</div>
+                </div>
+
+                <div id="pattern-finished-size" class="column">
+                    <div class="column-header">Finished Size</div>
+                </div>
+
             </div>
             <div id="pattern-disclaimer"></div>
             <div id="pattern-steps"></div>

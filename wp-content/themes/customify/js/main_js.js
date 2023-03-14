@@ -18,14 +18,12 @@ function loadPattern(data_json){
     loadFeaturedImages(data_json);
     loadMaterials(data_json);
     loadCrochetTerms(data_json);
-    
-    document.getElementById("pattern-finished-size").innerHTML = data_json["finished_size"];
+
+    loadFinishedSize(data_json);
 
     loadNotes(data_json);
 
-    document.getElementById("pattern-disclaimer").innerHTML = `****This pattern is for personal use only. Please do not copy, share or distribute 
-                                                                any portion of the pattern. Pattern made by Benny Buds. You can sell the bunny you made! 
-                                                                Just give credit for the pattern to Benny Buds.****`;
+    loadDisclaimer(data_json);
     
     loadSteps(data_json);
 
@@ -50,6 +48,7 @@ function loadFeaturedImages(data_json){
 function loadMaterials(data_json){
     var materials = data_json["materials"];
     var materialsList = document.createElement("ul");
+    materialsList.setAttribute("style", "margin: 0;");
     for (var i = 0; i < materials.length; i++){
         var materialItem = document.createElement("li");
         materialItem.innerHTML = data_json["materials"][i];
@@ -61,6 +60,7 @@ function loadMaterials(data_json){
 function loadCrochetTerms(data_json){
     var crochetTerms = data_json["crochet_terms"];
     var crochetTermsList = document.createElement("ul");
+    crochetTermsList.setAttribute("style", "margin: 0;");
     for (var i = 0; i < crochetTerms.length; i++){
         var crochetTermItem = document.createElement("li");
         crochetTermItem.innerHTML = data_json["crochet_terms"][i];
@@ -69,15 +69,28 @@ function loadCrochetTerms(data_json){
     document.getElementById("pattern-crochet-terms-list").appendChild(crochetTermsList);
 }
 
+function loadFinishedSize(data_json){
+    var finishedSize = document.createTextNode(data_json["finished_size"]);
+    document.getElementById("pattern-finished-size").appendChild(finishedSize);
+}
+
 function loadNotes(data_json){
     var notes = data_json["notes"];
     var notesList = document.createElement("ul");
+    notesList.setAttribute("style", "margin: 0;");
     for (var i = 0; i < notes.length; i++){
         var notesItem = document.createElement("li");
         notesItem.innerHTML = data_json["notes"][i];
         notesList.appendChild(notesItem);
     }
     document.getElementById("pattern-notes-list").appendChild(notesList);
+}
+
+function loadDisclaimer(data_json){
+    var disclaimer = document.createTextNode(`****This pattern is for personal use only. Please do not copy, share or distribute 
+        any portion of the pattern. Pattern made by Benny Buds. You can sell the bunny you made! 
+        Just give credit for the pattern to Benny Buds.****`);
+    document.getElementById("pattern-disclaimer").appendChild(disclaimer);
 }
 
 function loadSteps(data_json){

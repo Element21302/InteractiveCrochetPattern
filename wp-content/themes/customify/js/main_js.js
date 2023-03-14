@@ -41,7 +41,8 @@ function loadFeaturedImages(data_json){
         var img = document.createElement("img");
         console.log(data_json["featured_images"][i])
         img.setAttribute("src", patternLocation + data_json["featured_images"][i]);
-        img.setAttribute("class", "featured-images");
+        img.setAttribute("class", "images");
+        img.setAttribute("style", "height: 300px;")
         document.getElementById("pattern-featured-images").appendChild(img);
     }
 }
@@ -131,7 +132,8 @@ function loadSteps(data_json){
             else if(steps[o]["type"] == "image"){
                 var imgDiv = document.createElement("div");
                 var img = document.createElement("img");
-                img.setAttribute("class", "step-image");
+                img.setAttribute("class", "images");
+                img.setAttribute("style", "height: 300px;");
                 img.setAttribute("src", patternLocation + steps[o]["value"]);
                 imgDiv.appendChild(img);
                 stepsDiv.appendChild(imgDiv);
@@ -149,7 +151,8 @@ function loadPatternImages(data_json){
         var img = document.createElement("img");
         console.log(data_json["pattern_images"][i])
         img.setAttribute("src", patternLocation + data_json["pattern_images"][i]);
-        img.setAttribute("class", "pattern-images");
+        img.setAttribute("class", "images");
+        img.setAttribute("style", "height: 300px;");
         document.getElementById("pattern-images").appendChild(img);
     }
 }

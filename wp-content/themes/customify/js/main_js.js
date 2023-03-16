@@ -12,8 +12,8 @@ var checkboxes = [];
 
 function loadPattern(data_json){
     console.log(data_json);
-    document.getElementById("pattern-title").innerHTML = data_json["title"];
-    document.getElementById("pattern-subtitle").innerHTML = data_json["subtitle"];
+    document.getElementById("title").innerHTML = data_json["title"];
+    document.getElementById("subtitle").innerHTML = data_json["subtitle"];
     
     loadFeaturedImages(data_json);
     loadMaterials(data_json);
@@ -40,8 +40,8 @@ function loadFeaturedImages(data_json){
         console.log(data_json["featured_images"][i])
         img.setAttribute("src", patternLocation + data_json["featured_images"][i]);
         img.setAttribute("class", "images");
-        img.setAttribute("style", "max-height: 300px; max-width: 400px;")
-        document.getElementById("pattern-featured-images").appendChild(img);
+        img.setAttribute("style", "max-height: 300px; max-width: 400px; border-radius: 10px;")
+        document.getElementById("featured-images").appendChild(img);
     }
 }
 
@@ -54,7 +54,7 @@ function loadMaterials(data_json){
         materialItem.innerHTML = data_json["materials"][i];
         materialsList.appendChild(materialItem);
     }
-    document.getElementById("pattern-materials-list").appendChild(materialsList);
+    document.getElementById("materials-list").appendChild(materialsList);
 }
 
 function loadCrochetTerms(data_json){
@@ -66,13 +66,13 @@ function loadCrochetTerms(data_json){
         crochetTermItem.innerHTML = data_json["crochet_terms"][i];
         crochetTermsList.appendChild(crochetTermItem);
     }
-    document.getElementById("pattern-crochet-terms-list").appendChild(crochetTermsList);
+    document.getElementById("crochet-terms-list").appendChild(crochetTermsList);
 }
 
 function loadFinishedSize(data_json){
     var finishedSize = document.createElement("div");
     finishedSize.innerHTML = data_json["finished_size"];
-    document.getElementById("pattern-finished-size").appendChild(finishedSize);
+    document.getElementById("finished-size").appendChild(finishedSize);
 }
 
 function loadNotes(data_json){
@@ -84,34 +84,35 @@ function loadNotes(data_json){
         notesItem.innerHTML = data_json["notes"][i];
         notesList.appendChild(notesItem);
     }
-    document.getElementById("pattern-notes-list").appendChild(notesList);
+    document.getElementById("notes-list").appendChild(notesList);
 }
 
 function loadDisclaimer(data_json){
     var disclaimer = document.createTextNode(`****This pattern is for personal use only. Please do not copy, share or distribute 
         any portion of the pattern. Pattern made by Benny Buds. You can sell the bunny you made! 
         Just give credit for the pattern to Benny Buds.****`);
-    document.getElementById("pattern-disclaimer").appendChild(disclaimer);
+    document.getElementById("disclaimer").appendChild(disclaimer);
 }
 
 function loadSteps(data_json){
     var sections = data_json["pattern"];
-    //var sectionsDiv = document.createElement("div");
 
     for (var i = 0; i < sections.length; i++){
         var sectionDiv = document.createElement("div");
+        sectionDiv.setAttribute("class", "section");
 
         var sectionTitle = document.createElement("div");
         sectionTitle.setAttribute("class", "section-title");
         sectionTitle.innerHTML = toTitleCase(sections[i]["section_name"]);
-        sectionDiv.appendChild(sectionTitle);
 
         if(sections[i]["quantity"] > 1){
-            var sectionQuantity = document.createElement("div");
+            var sectionQuantity = document.createElement("span");
             sectionQuantity.setAttribute("class", "section-quantity");
             sectionQuantity.innerHTML = "(make " + sections[i]["quantity"] + ")";
-            sectionDiv.appendChild(sectionQuantity);
+            sectionTitle.appendChild(sectionQuantity);
         }
+
+        sectionDiv.appendChild(sectionTitle);
 
         var stepsDiv = document.createElement("div");
         stepsDiv.setAttribute("class", "steps-container")
@@ -137,27 +138,25 @@ function loadSteps(data_json){
                 stepsDiv.appendChild(checkboxDiv);
             }
             else if(steps[o]["type"] == "note"){
-                var note = document.createElement("div");
-                note.setAttribute("class", "step-note");
-                note.innerHTML = steps[o]["value"];
-                stepsDiv.appendChild(note);
+                var noteDiv = document.createElement("div");
+                noteDiv.setAttribute("class", "step-note");
+                noteDiv.innerHTML = steps[o]["value"];
+                stepsDiv.appendChild(noteDiv);
             }
             else if(steps[o]["type"] == "image"){
                 var imgDiv = document.createElement("div");
+                imgDiv.setAttribute("class", "step-image");
                 var img = document.createElement("img");
                 img.setAttribute("class", "images");
-                img.setAttribute("style", "max-height: 300px; max-width: 400px;")
+                img.setAttribute("style", "max-height: 175px; max-width: 400px; border-radius: 10px;")
                 img.setAttribute("src", patternLocation + steps[o]["value"]);
                 imgDiv.appendChild(img);
                 stepsDiv.appendChild(imgDiv);
             }
         }
         sectionDiv.appendChild(stepsDiv);
-        document.getElementById("pattern-steps").appendChild(sectionDiv);
-        //sectionsDiv.appendChild(sectionDiv);
-
+        document.getElementById("steps").appendChild(sectionDiv);
     }
-    //document.getElementById("pattern-steps").appendChild(sectionsDiv);
 }
 
 function loadPatternImages(data_json){
@@ -167,9 +166,13 @@ function loadPatternImages(data_json){
         console.log(data_json["pattern_images"][i])
         img.setAttribute("src", patternLocation + data_json["pattern_images"][i]);
         img.setAttribute("class", "images");
-        img.setAttribute("style", "max-height: 300px; max-width: 400px;")
-        document.getElementById("pattern-images").appendChild(img);
+        img.setAttribute("style", "max-height: 300px; max-width: 400px; border-radius: 10px;")
+        document.getElementById("images").appendChild(img);
     }
+}
+
+function loadPatternClosing(data_json){
+    console.log("closing here");
 }
 
 var checkboxes = [];

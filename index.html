@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link rel="stylesheet" href="wp-content/themes/customify/pattern-style.css?=0.0.4">
+    <link rel="stylesheet" href="wp-content/themes/customify/pattern-style.css?=0.0.20">
     <link rel="stylesheet" href="wp-content/themes/customify/style.min.css">
     <script src="wp-content/themes/customify/js/jquery-3.6.4.min.js"></script>
 
@@ -14,38 +14,53 @@
 <body style="text-align: center; padding: 20px;">
     <script src="wp-content/themes/customify/js/main_js.js" defer></script>
 
-    <div style="max-width: 863px; text-align: center;">
+    <div><a href="#materials">Materials</a>
+        <a href="#terms">Terms</a>
+        <a href="#notes">Notes</a>
+        <a href="#size">Size</a>
+        <a href="#instructions">Instructions</a>
+    </div>
+
+    <div style=" max-width: 863px; text-align: center; margin: 0 auto;">
 
         <div id="pattern">
 
-            <div id="pattern-title"></div>
-            <div id="pattern-subtitle"></div>
-            <div id="pattern-featured-images"></div>
-            <div id="columns">
+            <div id="title"></div>
+            <div id="subtitle"></div>
+            <div id="featured-images"></div>
 
-                <div id="pattern-materials-list" class="column">
+            <div id="columns">
+                <a id="materials"></a>
+                <div id="materials-list" class="column">
                     <span class="column-header">Materials</span>
                 </div>
 
-                <div id="pattern-crochet-terms-list" class="column">
+                <a id="terms"></a>
+                <div id="crochet-terms-list" class="column">
                     <span class="column-header">Crochet Terms</span>
                 </div>
-
-                <div id="pattern-notes-list" class="column">
-                    <span class="column-header">Notes</span>
-                </div>
-
-                <div id="pattern-finished-size" class="column">
-                    <span class="column-header">Finished Size</span>
-                </div>
-
             </div>
-            <div id="pattern-disclaimer"></div>
-            <div id="pattern-steps">
+
+            <a id="notes"></a>
+            <div id="notes-list" class="column">
+                <span class="column-header">Notes</span>
+            </div>
+
+            <a id="size"></a>
+            <div id="finished-size" class="column">
+                <span class="column-header">Finished Size</span>
+            </div>
+
+            <span id="disclaimer"></span>
+            <hr>
+
+            <div id="steps">
                 <span class="column-header">Instructions</span>
             </div>
 
-            <div id="pattern-images"></div>
+            <div id="images"></div>
+
+            <div id="closing"></div>
 
         </div>
     </div>

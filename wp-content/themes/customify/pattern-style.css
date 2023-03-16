@@ -1,43 +1,61 @@
-input[type=checkbox]:checked + label{
-    text-decoration: line-through;
+@font-face{
+    font-family: "Florence";
+    src: url('wp-content/themes/customify/assets/fonts/florence/Florence-Regular.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
-input[type=checkbox] + label{
-    display: inline-block;
-    width: 100%;
-    padding: 5px 0;
-}
-input[type=checkbox] + label:hover{
-    background-color: #CCCCCC;
-}
-input[type=checkbox]{
-    display: none;
-}
-li{
-    text-align: left;
-}
+@font-face {
+    font-family: 'florenceregular';
+    src: url('florence-regular-webfont.woff2') format('woff2'),
+         url('florence-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
 
 #pattern{
     text-align: center;
+    background-color: #ffefef;
+    padding: 20px;
+    font-family: 'florenceregular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333333;
 }
-#pattern-title{
+#title{
     font-size: 2em;
     font-weight: bold;
 }
-#pattern-subtitle{
+#subtitle{
     font-size: 1.8em;
     font-weight: bold;
+    display: none;
 }
-#pattern-disclaimer{
-    font-size: 1.3em;
+#steps input[type=checkbox] + label{
+    display: inline-block;
+    padding: 3px 6px;
+    
+}
+#steps input[type=checkbox]:checked + label{
+    text-decoration: line-through;
+    color: #9f9f9f;
+}
+#steps input[type=checkbox] + label:hover{
+    background-color: #CCCCCC;
+}
+#steps input[type=checkbox]{
+    display: none;
+}
+
+#disclaimer{
+    font-size: 1.1em;
     font-weight: bold;
     display: inline-block;
     margin: 20px;
     padding: 10px;
     border: 3px solid #3ab2b8;
+    border-radius: 5px;
 }
-#pattern-steps{
-    text-align: left;
+#images{
+    clear: both;
 }
 
 
@@ -47,8 +65,12 @@ li{
 .column{
     display: inline-block;
     vertical-align: top;
+    text-align: center;
     min-width: 350px;
     max-width: 600px;
+}
+.column li{
+    text-align: left;
 }
 .column-header{
     font-size: 1.5em;
@@ -57,24 +79,42 @@ li{
 .finished-size{
     padding: 16 0 16 30;
 }
+.section{
+    clear: both;
+    text-align: left;
+    margin-bottom: 20px;
+}
 .section-title{
     display: inline-block;
     font-size: 1.5em;
     font-weight: bold;
     padding-left: 40px;
+    padding-right: 10px;
+    margin-bottom: 3px;
+    border-bottom: 3px solid #3ab2b8;
 }
 .section-quantity{
-    display: inline-block;
-    font-size: 1.2em;
-    padding-left: 5px;
+    font-size: .6em;
+    margin-left: 10px;
 }
 .steps-container{
     text-align: left;
 }
 .step-note{
-    padding: 5px;
-    font-size: 1.1em;
-    font-weight: bold;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-color: #dcecec;
+    border: solid 1px #3ab2b8;
+    border-radius: 6px;
+    line-height: 18px;
+    mc-auto-number-format: '{b}Note: {/b}';
+    overflow: hidden;
+    padding: 12px;
+    margin: 5px 10px;
+    display: inline-block;
+}
+.step-image{
+    float: right;
 }
 .checkbox-div{
     margin:  2px;
